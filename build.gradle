@@ -1,15 +1,19 @@
+
+import org.gradle.plugins.ide.eclipse.model.Facet
+
 apply plugin: 'maven'
 apply plugin: 'war'
 apply plugin: 'eclipse-wtp'
 
-//webAppDirName = 'webapp'
+webAppDirName = 'WebContent'
+sourceSets.main.java.srcDir 'src'
 
 repositories {
 	mavenCentral()
 }
 
 dependencies {
-	compile (
+	runtime (
 		"org.mybatis:mybatis:3.2.8",
 		"org.mybatis:mybatis-spring:1.2.2",
 		
@@ -34,7 +38,7 @@ dependencies {
 }
 
 task copyHbm(type: Copy){
-	from 'src/main/java/com/base/model'
-	into 'build/classes/main/com/base/model'
+	from 'src/'
+	into 'WebContent/WEB-INF/classes/'
 	exclude '**/*.java'
 }

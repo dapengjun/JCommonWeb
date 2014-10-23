@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="output" path="bin"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER" exported="true"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container" exported="true"/>
+	<classpathentry sourcepath="/home/fengshen/.gradle/caches/modules-2/files-2.1/org.mybatis/mybatis/3.2.8/287bc9f8485a85211d7a900fe43c74264ee0561b/mybatis-3.2.8-sources.jar" kind="lib" path="/home/fengshen/.gradle/caches/modules-2/files-2.1/org.mybatis/mybatis/3.2.8/7b6bf82cea13570b5290d6ed841283a1fcce170/mybatis-3.2.8.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/home/fengshen/.gradle/caches/modules-2/files-2.1/org.mybatis/mybatis-spring/1.2.2/37d4385e146df3794aab4f773ac709e6cb83517d/mybatis-spring-1.2.2-sources.jar" kind="lib" path="/home/fengshen/.gradle/caches/modules-2/files-2.1/org.mybatis/mybatis-spring/1.2.2/1e40a7f5373e4242075a1d386817e7dd49b1697d/mybatis-spring-1.2.2.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/home/fengshen/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/4.1.1.RELEASE/4bd6cb7e742a6342ab039de1ed26fe54e33be591/spring-core-4.1.1.RELEASE-sources.jar" kind="lib" path="/home/fengshen/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/4.1.1.RELEASE/4b0c607ba83c95ad9ea3defd40c35ae47c5df7d0/spring-core-4.1.1.RELEASE.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/home/fengshen/.gradle/caches/modules-2/files-2.1/org.springframework/spring-tx/4.1.1.RELEASE/9ce6cc2a5557191548aad6e08ad323eea424ab0f/spring-tx-4.1.1.RELEASE-sources.jar" kind="lib" path="/home/fengshen/.gradle/caches/modules-2/files-2.1/org.springframework/spring-tx/4.1.1.RELEASE/7025c6f9736feed7893a59730b56fa0a1569580c/spring-tx-4.1.1.RELEASE.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/home/fengshen/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jdbc/4.1.1.RELEASE/214b4d91741b7ef0c3d3afcda4f3af909f35bf97/spring-jdbc-4.1.1.RELEASE-sources.jar" kind="lib" path="/home/fengshen/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jdbc/4.1.1.RELEASE/7961fd80b1a39358a527110dcc2751e2535ca31f/spring-jdbc-4.1.1.RELEASE.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/home/fengshen/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context/4.1.1.RELEASE/1b69bb54483ab092b83fc4c765e6694f3af7348f/spring-context-4.1.1.RELEASE-sources.jar" kind="lib" path="/home/fengshen/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context/4.1.1.RELEASE/3c79ab100df285ea0cc0b4543fe4042543405001/spring-context-4.1.1.RELEASE.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/home/fengshen/.gradle/caches/modules-2/files-2.1/org.springframework/spring-beans/4.1.1.RELEASE/6945f40ede50763093412c7436376e777421ddb2/spring-beans-4.1.1.RELEASE-sources.jar" kind="lib" path="/home/fengshen/.gradle/caches/modules-2/files-2.1/org.springframework/spring-beans/4.1.1.RELEASE/a44061faf47da974376bbfa6e84e316046d45c8c/spring-beans-4.1.1.RELEASE.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/home/fengshen/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/4.1.1.RELEASE/a841bc213ddb3344d9e5447c8aca3f36becddb54/spring-web-4.1.1.RELEASE-sources.jar" kind="lib" path="/home/fengshen/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/4.1.1.RELEASE/c496e2c84b7275309bbe29d2fa90a968acce9ce9/spring-web-4.1.1.RELEASE.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/home/fengshen/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aop/4.1.1.RELEASE/34f77ba9c1df0604051c1e9511e0555286509ef9/spring-aop-4.1.1.RELEASE-sources.jar" kind="lib" path="/home/fengshen/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aop/4.1.1.RELEASE/5175950be849e409f328bd4ea0f16f3ea9466359/spring-aop-4.1.1.RELEASE.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/home/fengshen/.gradle/caches/modules-2/files-2.1/org.springframework/spring-expression/4.1.1.RELEASE/1719ef93281026ae09e94b71f8179e1514ea2b9d/spring-expression-4.1.1.RELEASE-sources.jar" kind="lib" path="/home/fengshen/.gradle/caches/modules-2/files-2.1/org.springframework/spring-expression/4.1.1.RELEASE/c86cad6880c3f5c13a81677411b6f41873c80e75/spring-expression-4.1.1.RELEASE.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/home/fengshen/.gradle/caches/modules-2/files-2.1/org.apache.struts/struts2-spring-plugin/2.3.16.3/ca5cb8383ed3f9de732475f1ad67797d0aeffcaa/struts2-spring-plugin-2.3.16.3-sources.jar" kind="lib" path="/home/fengshen/.gradle/caches/modules-2/files-2.1/org.apache.struts/struts2-spring-plugin/2.3.16.3/82c49cf0ea846f1b6916aeebf3969291cd73020f/struts2-spring-plugin-2.3.16.3.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/home/fengshen/.gradle/caches/modules-2/files-2.1/org.apache.struts/struts2-core/2.3.16.3/9ced2ea9132701e3b3f91097f795f5c70c9f4663/struts2-core-2.3.16.3-sources.jar" kind="lib" path="/home/fengshen/.gradle/caches/modules-2/files-2.1/org.apache.struts/struts2-core/2.3.16.3/3cf0054960a5959e569695bf70c41eab89aeda75/struts2-core-2.3.16.3.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/home/fengshen/.gradle/caches/modules-2/files-2.1/com.jgeppert.struts2.jquery/struts2-jquery-plugin/3.7.1/906a9b9a668da4588a0c9a1422f428e83833dee4/struts2-jquery-plugin-3.7.1-sources.jar" kind="lib" path="/home/fengshen/.gradle/caches/modules-2/files-2.1/com.jgeppert.struts2.jquery/struts2-jquery-plugin/3.7.1/3929c4bba7d7fa7ce9fead85a9b31b7ca12222/struts2-jquery-plugin-3.7.1.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/home/fengshen/.gradle/caches/modules-2/files-2.1/com.jgeppert.struts2.jquery/struts2-jquery-grid-plugin/3.7.1/3c1b6a99e5ed16d2459ffb5494f1f0b4d9d6f670/struts2-jquery-grid-plugin-3.7.1-sources.jar" kind="lib" path="/home/fengshen/.gradle/caches/modules-2/files-2.1/com.jgeppert.struts2.jquery/struts2-jquery-grid-plugin/3.7.1/cb1b9d3a5afb3b72b2ceca8053a7d3e5ec3c136/struts2-jquery-grid-plugin-3.7.1.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/home/fengshen/.gradle/caches/modules-2/files-2.1/com.jgeppert.struts2.jquery/struts2-jquery-tree-plugin/3.7.1/c88ebb0aa0f2cdc1918fa50351c89fe1e72c64d0/struts2-jquery-tree-plugin-3.7.1-sources.jar" kind="lib" path="/home/fengshen/.gradle/caches/modules-2/files-2.1/com.jgeppert.struts2.jquery/struts2-jquery-tree-plugin/3.7.1/2341be0c73d4c0106554f9c239c781d11de21ff7/struts2-jquery-tree-plugin-3.7.1.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/home/fengshen/.gradle/caches/modules-2/files-2.1/org.apache.struts/struts2-json-plugin/2.3.16.3/a8d4b944050d4c2e85893a5efbd0eeea87b61e75/struts2-json-plugin-2.3.16.3-sources.jar" kind="lib" path="/home/fengshen/.gradle/caches/modules-2/files-2.1/org.apache.struts/struts2-json-plugin/2.3.16.3/303c15c2099a6dd7d6d370d743a4becf6547a91e/struts2-json-plugin-2.3.16.3.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/home/fengshen/.gradle/caches/modules-2/files-2.1/com.jgeppert.struts2.jquery/struts2-jquery-chart-plugin/3.7.1/4439b70e4c8342d25bef610df70331f8ce9a9bcb/struts2-jquery-chart-plugin-3.7.1-sources.jar" kind="lib" path="/home/fengshen/.gradle/caches/modules-2/files-2.1/com.jgeppert.struts2.jquery/struts2-jquery-chart-plugin/3.7.1/7a206736fbffe9a0c6169e0b88dd5b9e727e1ea6/struts2-jquery-chart-plugin-3.7.1.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/home/fengshen/.gradle/caches/modules-2/files-2.1/com.jgeppert.struts2.jquery/struts2-jquery-mobile-plugin/3.7.1/4fc61899d131c6648b7e7e8bee8cf692f412a245/struts2-jquery-mobile-plugin-3.7.1-sources.jar" kind="lib" path="/home/fengshen/.gradle/caches/modules-2/files-2.1/com.jgeppert.struts2.jquery/struts2-jquery-mobile-plugin/3.7.1/931d2d7760c92fdb976e175d61692861cb96ff6f/struts2-jquery-mobile-plugin-3.7.1.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/home/fengshen/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.1.3/28bb0405fddaf04f15058fbfbe01fe2780d7d3b6/commons-logging-1.1.3-sources.jar" kind="lib" path="/home/fengshen/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.1.3/f6f66e966c70a83ffbdb6f17a0919eaf7c8aca7f/commons-logging-1.1.3.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/home/fengshen/.gradle/caches/modules-2/files-2.1/aopalliance/aopalliance/1.0/4a4b6d692e17846a9f3da036438a7ac491d3c814/aopalliance-1.0-sources.jar" kind="lib" path="/home/fengshen/.gradle/caches/modules-2/files-2.1/aopalliance/aopalliance/1.0/235ba8b489512805ac13a8f9ea77a1ca5ebe3e8/aopalliance-1.0.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/home/fengshen/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.1/8d30b90ae8bda4fbac8363161c8a9b5a99e23baf/commons-lang3-3.1-sources.jar" kind="lib" path="/home/fengshen/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.1/905075e6c80f206bbe6cf1e809d2caa69f420c76/commons-lang3-3.1.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/home/fengshen/.gradle/caches/modules-2/files-2.1/org.apache.struts.xwork/xwork-core/2.3.16.3/57eb1424ba213ab21e7b1e8f409c7e40af7c646/xwork-core-2.3.16.3-sources.jar" kind="lib" path="/home/fengshen/.gradle/caches/modules-2/files-2.1/org.apache.struts.xwork/xwork-core/2.3.16.3/bacbc7e69e258d6f9b7fc34c2ec57c9c0fb2641c/xwork-core-2.3.16.3.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/home/fengshen/.gradle/caches/modules-2/files-2.1/org.freemarker/freemarker/2.3.19/ab4cb735b398b842a67e0010ab4d99856bae20bb/freemarker-2.3.19-sources.jar" kind="lib" path="/home/fengshen/.gradle/caches/modules-2/files-2.1/org.freemarker/freemarker/2.3.19/a251045e5fadd02824d17f1aa8c412accf1aa1c9/freemarker-2.3.19.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/home/fengshen/.gradle/caches/modules-2/files-2.1/ognl/ognl/3.0.6/8ef4c8207d5a87c99bd7a080aa04ef954aa00b44/ognl-3.0.6-sources.jar" kind="lib" path="/home/fengshen/.gradle/caches/modules-2/files-2.1/ognl/ognl/3.0.6/a3665cf8e3426686ee751790f3d1e1ec5705e9dc/ognl-3.0.6.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/home/fengshen/.gradle/caches/modules-2/files-2.1/commons-fileupload/commons-fileupload/1.3.1/a1fa20f7f3ad210f4b2eb51b63be3f0273be263a/commons-fileupload-1.3.1-sources.jar" kind="lib" path="/home/fengshen/.gradle/caches/modules-2/files-2.1/commons-fileupload/commons-fileupload/1.3.1/c621b54583719ac0310404463d6d99db27e1052c/commons-fileupload-1.3.1.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/home/fengshen/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.2/8d6b98f21262995489a8418fff8da992d7e25c1e/commons-io-2.2-sources.jar" kind="lib" path="/home/fengshen/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.2/83b5b8a7ba1c08f9e8c8ff2373724e33d3c1e22a/commons-io-2.2.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/fengshen/.gradle/caches/modules-2/files-2.1/org.apache.velocity/velocity/1.5/9f306baf7523ffc0e81a6353d08a584d254133b/velocity-1.5.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/home/fengshen/.gradle/caches/modules-2/files-2.1/commons-beanutils/commons-beanutils/1.7.0/b68c4fc66026e8c08df7fb57c7dc1e94a6ed8cbb/commons-beanutils-1.7.0-sources.jar" kind="lib" path="/home/fengshen/.gradle/caches/modules-2/files-2.1/commons-beanutils/commons-beanutils/1.7.0/5675fd96b29656504b86029551973d60fb41339b/commons-beanutils-1.7.0.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/fengshen/.gradle/caches/modules-2/files-2.1/asm/asm/3.3/fb0f302a91a376fd5cfe23167c419375e8fc9b8f/asm-3.3.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/fengshen/.gradle/caches/modules-2/files-2.1/asm/asm-commons/3.3/3630d2095238beee3f94670af3d9a9dc115ce887/asm-commons-3.3.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/home/fengshen/.gradle/caches/modules-2/files-2.1/javassist/javassist/3.11.0.GA/8a603d8877c8d9cc032de295f719d10e3b90dc3d/javassist-3.11.0.GA-sources.jar" kind="lib" path="/home/fengshen/.gradle/caches/modules-2/files-2.1/javassist/javassist/3.11.0.GA/2c00105734a57e9ee4f27e4b17cd43200e5f0ff8/javassist-3.11.0.GA.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/home/fengshen/.gradle/caches/modules-2/files-2.1/commons-collections/commons-collections/3.1/a48ca211fd2a564425c2cb9b90cb0f9158cfce52/commons-collections-3.1-sources.jar" kind="lib" path="/home/fengshen/.gradle/caches/modules-2/files-2.1/commons-collections/commons-collections/3.1/40fb048097caeacdb11dbb33b5755854d89efdeb/commons-collections-3.1.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/home/fengshen/.gradle/caches/modules-2/files-2.1/commons-lang/commons-lang/2.1/8bd7257fc98610b6082c6798f530318d5be8852a/commons-lang-2.1-sources.jar" kind="lib" path="/home/fengshen/.gradle/caches/modules-2/files-2.1/commons-lang/commons-lang/2.1/4763ecc9d78781c915c07eb03e90572c7ff04205/commons-lang-2.1.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/home/fengshen/.gradle/caches/modules-2/files-2.1/oro/oro/2.0.8/3598e790ecd76ff7eb249853d4d00822ae1a5e71/oro-2.0.8-sources.jar" kind="lib" path="/home/fengshen/.gradle/caches/modules-2/files-2.1/oro/oro/2.0.8/5592374f834645c4ae250f4c9fbb314c9369d698/oro-2.0.8.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/fengshen/.gradle/caches/modules-2/files-2.1/asm/asm-tree/3.3/33c13070f194e1f0385877ec9306a24e983b00e3/asm-tree-3.3.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+</classpath>
