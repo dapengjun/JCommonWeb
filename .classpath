@@ -4,6 +4,11 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER" exported="true"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container" exported="true"/>
+	<classpathentry sourcepath="/home/fengshen/.gradle/caches/modules-2/files-2.1/javax.servlet/javax.servlet-api/3.1.0/ab3976d4574c48d22dc1abf6a9e8bd0fdf928223/javax.servlet-api-3.1.0-sources.jar" kind="lib" path="/home/fengshen/.gradle/caches/modules-2/files-2.1/javax.servlet/javax.servlet-api/3.1.0/3cd63d075497751784b2fa84be59432f4905bf7c/javax.servlet-api-3.1.0.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
 	<classpathentry sourcepath="/home/fengshen/.gradle/caches/modules-2/files-2.1/org.mybatis/mybatis/3.2.8/287bc9f8485a85211d7a900fe43c74264ee0561b/mybatis-3.2.8-sources.jar" kind="lib" path="/home/fengshen/.gradle/caches/modules-2/files-2.1/org.mybatis/mybatis/3.2.8/7b6bf82cea13570b5290d6ed841283a1fcce170/mybatis-3.2.8.jar" exported="true">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
@@ -54,12 +59,52 @@
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>
 	</classpathentry>
+	<classpathentry sourcepath="/home/fengshen/.gradle/caches/modules-2/files-2.1/org.aspectj/aspectjrt/1.8.3/eaef14888f0468b23c25f8b56862701073bd759e/aspectjrt-1.8.3-sources.jar" kind="lib" path="/home/fengshen/.gradle/caches/modules-2/files-2.1/org.aspectj/aspectjrt/1.8.3/15352fc4cc37925a5bbc417181b0799efc41e9e7/aspectjrt-1.8.3.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/home/fengshen/.gradle/caches/modules-2/files-2.1/org.aspectj/aspectjweaver/1.8.3/b02cecd2bdc889f1005e451ef16aaa7b46a51260/aspectjweaver-1.8.3-sources.jar" kind="lib" path="/home/fengshen/.gradle/caches/modules-2/files-2.1/org.aspectj/aspectjweaver/1.8.3/cb2ab8ac997d9a31e441b6ae2de38979b2b844aa/aspectjweaver-1.8.3.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/fengshen/.gradle/caches/modules-2/files-2.1/commons-dbcp/commons-dbcp/20030825.184428/90aa2b7c1bbcb86616aebc744d07965e288996ab/commons-dbcp-20030825.184428.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/fengshen/.gradle/caches/modules-2/files-2.1/commons-pool/commons-pool/20030825.183949/e1f9178b3326bf5e1a612eaa4249a08336684d1c/commons-pool-20030825.183949.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
 	<classpathentry sourcepath="/home/fengshen/.gradle/caches/modules-2/files-2.1/org.apache.struts/struts2-spring-plugin/2.3.16.3/ca5cb8383ed3f9de732475f1ad67797d0aeffcaa/struts2-spring-plugin-2.3.16.3-sources.jar" kind="lib" path="/home/fengshen/.gradle/caches/modules-2/files-2.1/org.apache.struts/struts2-spring-plugin/2.3.16.3/82c49cf0ea846f1b6916aeebf3969291cd73020f/struts2-spring-plugin-2.3.16.3.jar" exported="true">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>
 	</classpathentry>
 	<classpathentry sourcepath="/home/fengshen/.gradle/caches/modules-2/files-2.1/org.apache.struts/struts2-core/2.3.16.3/9ced2ea9132701e3b3f91097f795f5c70c9f4663/struts2-core-2.3.16.3-sources.jar" kind="lib" path="/home/fengshen/.gradle/caches/modules-2/files-2.1/org.apache.struts/struts2-core/2.3.16.3/3cf0054960a5959e569695bf70c41eab89aeda75/struts2-core-2.3.16.3.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/home/fengshen/.gradle/caches/modules-2/files-2.1/org.apache.struts/struts2-convention-plugin/2.3.16.3/81480a70dc2da17a89013c444a326ac8cbbc850e/struts2-convention-plugin-2.3.16.3-sources.jar" kind="lib" path="/home/fengshen/.gradle/caches/modules-2/files-2.1/org.apache.struts/struts2-convention-plugin/2.3.16.3/1a91faffb445810e9a57c09ddde6341637089264/struts2-convention-plugin-2.3.16.3.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/home/fengshen/.gradle/caches/modules-2/files-2.1/org.apache.struts/struts2-json-plugin/2.3.16.3/a8d4b944050d4c2e85893a5efbd0eeea87b61e75/struts2-json-plugin-2.3.16.3-sources.jar" kind="lib" path="/home/fengshen/.gradle/caches/modules-2/files-2.1/org.apache.struts/struts2-json-plugin/2.3.16.3/303c15c2099a6dd7d6d370d743a4becf6547a91e/struts2-json-plugin-2.3.16.3.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/home/fengshen/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.7/acd62e31cc314266e73eebed0b6dd7ea974a0ed/slf4j-api-1.7.7-sources.jar" kind="lib" path="/home/fengshen/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.7/2b8019b6249bb05d81d3a3094e468753e2b21311/slf4j-api-1.7.7.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/home/fengshen/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-log4j12/1.7.7/8b4cb18ba8eb2d71cd2cd630266136e8271d270d/slf4j-log4j12-1.7.7-sources.jar" kind="lib" path="/home/fengshen/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-log4j12/1.7.7/58f588119ffd1702c77ccab6acb54bfb41bed8bd/slf4j-log4j12-1.7.7.jar" exported="true">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>
@@ -75,11 +120,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry sourcepath="/home/fengshen/.gradle/caches/modules-2/files-2.1/com.jgeppert.struts2.jquery/struts2-jquery-tree-plugin/3.7.1/c88ebb0aa0f2cdc1918fa50351c89fe1e72c64d0/struts2-jquery-tree-plugin-3.7.1-sources.jar" kind="lib" path="/home/fengshen/.gradle/caches/modules-2/files-2.1/com.jgeppert.struts2.jquery/struts2-jquery-tree-plugin/3.7.1/2341be0c73d4c0106554f9c239c781d11de21ff7/struts2-jquery-tree-plugin-3.7.1.jar" exported="true">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
-		</attributes>
-	</classpathentry>
-	<classpathentry sourcepath="/home/fengshen/.gradle/caches/modules-2/files-2.1/org.apache.struts/struts2-json-plugin/2.3.16.3/a8d4b944050d4c2e85893a5efbd0eeea87b61e75/struts2-json-plugin-2.3.16.3-sources.jar" kind="lib" path="/home/fengshen/.gradle/caches/modules-2/files-2.1/org.apache.struts/struts2-json-plugin/2.3.16.3/303c15c2099a6dd7d6d370d743a4becf6547a91e/struts2-json-plugin-2.3.16.3.jar" exported="true">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>
@@ -130,6 +170,11 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry sourcepath="/home/fengshen/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.2/8d6b98f21262995489a8418fff8da992d7e25c1e/commons-io-2.2-sources.jar" kind="lib" path="/home/fengshen/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.2/83b5b8a7ba1c08f9e8c8ff2373724e33d3c1e22a/commons-io-2.2.jar" exported="true">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/home/fengshen/.gradle/caches/modules-2/files-2.1/log4j/log4j/1.2.17/677abe279b68c5e7490d6d50c6951376238d7d3e/log4j-1.2.17-sources.jar" kind="lib" path="/home/fengshen/.gradle/caches/modules-2/files-2.1/log4j/log4j/1.2.17/5af35056b4d257e4b64b9e8069c0746e8b08629f/log4j-1.2.17.jar" exported="true">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>

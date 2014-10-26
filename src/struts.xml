@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+    <constant name="struts.objectFactory" value="spring" />
+    <constant name="struts.devMode" value="true" />
+    <!-- 国际化资源文件定义 -->
+    <constant name="struts.custom.i18n.resources" value="messageResource"/>
+    <constant name="struts.action.extension" value="action,do" />
+    <!-- 设置字符集 -->
+    <constant name="struts.i18n.encoding"  value="UTF-8"></constant>
+    <constant name="struts.convention.package.locators" value="action" />
+	<constant name="struts.convention.classes.reload" value="true" />
+    <package name="struts-shops" extends="json-default,struts-default">
+        <!-- 自定义返回类型 -->
+        <!--<result-types> 
+            <result-type name="string" class="com.future.common.result.StringResultType"></result-type>
+        </result-types>--> 
+        <!-- 拦截器 -->
+        <interceptors>
+            <interceptor name="timer" class="cn.itear.perm.interceptor.InterceptorImpl"/>
+            <interceptor-stack name="myStack">
+               <interceptor-ref name="defaultStack"></interceptor-ref>
+               <interceptor-ref name="timer"/>
+            </interceptor-stack>   
+        </interceptors> 
+
+        <default-interceptor-ref name="myStack" />
+        <global-results>
+            <result name="login" type="redirect">
+			    /login.html
+			</result>
+            <!-- <result name="successadd" type="json">
+              <param name="root">messageInfo</param>
+            </result> -->
+        </global-results>
+    </package>
+    <!-- Add packages here 
+    <include file="/com/future/demo/struts-demo.xml"/>
+    <include file="/com/future/user/struts-user.xml"/>-->
+</struts>
