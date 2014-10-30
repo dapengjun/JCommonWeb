@@ -4,10 +4,18 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
 	id="WebApp_ID" version="3.0">
 	<display-name>itear</display-name>
-	<filter>
-		<filter-name>SecurityFilter</filter-name>
-		<filter-class>cn.itear.perm.filter.LoginFilter</filter-class>
-	</filter>
+    <!-- <filter>
+        <filter-name>CheckInstallFilter</filter-name>
+        <filter-class>cn.itear.common.filter.CheckInstallFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>CheckInstallFilter</filter-name>
+        <url-pattern>*</url-pattern>
+    </filter-mapping> -->
+    <filter>
+        <filter-name>SecurityFilter</filter-name>
+        <filter-class>cn.itear.perm.filter.LoginFilter</filter-class>
+    </filter>
     <filter-mapping>
         <filter-name>SecurityFilter</filter-name>
         <url-pattern>*.html</url-pattern>

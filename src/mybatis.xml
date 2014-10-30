@@ -6,5 +6,6 @@
     </typeAliases>
     <mappers>
         <mapper resource="cn/itear/perm/mappers/user.xml" />
+        <mapper resource="cn/itear/common/mappers/common.xml" />
     </mappers>
 </configuration>

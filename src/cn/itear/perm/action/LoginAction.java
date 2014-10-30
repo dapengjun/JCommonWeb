@@ -57,6 +57,7 @@ public class LoginAction extends BaseAction {
     public String execute() {
         Map<String, Object> session = ActionContext.getContext().getSession();
         try {
+        	userService.test();
             if (userPo != null) {
                 session.put("user", userPo);
             }else{

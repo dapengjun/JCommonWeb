@@ -1,7 +1,11 @@
 package cn.itear.common.service;
 
-import java.io.Serializable;
+public class BaseServiceImpl implements IBaseService {
 
-public class BaseServiceImpl<T extends Serializable> implements IBaseService<T> {
-
+	@Override
+	public void test() {
+		// TODO Auto-generated method stub
+		
+	}
+	
 }

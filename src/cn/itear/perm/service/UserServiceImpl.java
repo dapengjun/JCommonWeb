@@ -6,16 +6,22 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import cn.itear.common.service.BaseServiceImpl;
 import cn.itear.perm.dao.IUserDao;
 import cn.itear.perm.po.UserPo;
 
 @Transactional
 @Service("userService")
-public class UserServiceImpl implements IUserService {
+public class UserServiceImpl extends BaseServiceImpl implements IUserService {
 
     @Autowired
     private IUserDao userDao;
 
+    public void test()
+    {
+    	userDao.sqlExec("create table test1(name varchar(20))");
+    }
+    
     // 添加用户
     public void addUser(UserPo user) {
         userDao.insertUser(user);

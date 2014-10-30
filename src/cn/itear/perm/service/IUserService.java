@@ -2,21 +2,22 @@ package cn.itear.perm.service;
 
 import java.util.List;
 
+import cn.itear.common.service.IBaseService;
 import cn.itear.perm.po.UserPo;
 
-public interface IUserService {
+public interface IUserService extends IBaseService {
 
     // 添加用户
-    public abstract void addUser(UserPo user);
+    public void addUser(UserPo user);
 
-    public abstract void updateUser(UserPo user);
+    public void updateUser(UserPo user);
 
-    public abstract void deleteUser(Integer userId);
+    public void deleteUser(Integer userId);
 
-    public abstract UserPo findUserById(Integer userId);
+    public UserPo findUserById(Integer userId);
 
-    public abstract List<UserPo> findAllUser();
+    public List<UserPo> findAllUser();
 
-    public abstract UserPo login(UserPo user);
+    public UserPo login(UserPo user);
 
 }

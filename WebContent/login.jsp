@@ -8,8 +8,8 @@
 </head>
 <body>
 <form action="login.do" method="post">
-<input type=text name="userPo.userName"/><br/>
-<input type=text name="userPo.passwd"/><br/>
+<input type=text name="userPo.username"/><br/>
+<input type=text name="userPo.password"/><br/>
 <input type=submit />
 </form>
 </body>

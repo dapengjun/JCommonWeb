@@ -2,22 +2,19 @@ package cn.itear.perm.dao;
 
 import java.util.List;
 
-import org.mybatis.spring.SqlSessionTemplate;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import cn.itear.common.dao.BaseDaoImpl;
 import cn.itear.perm.po.UserPo;
 
 @Repository("userDao")
-public class UserDaoImpl implements IUserDao {
+public class UserDaoImpl extends BaseDaoImpl implements IUserDao {
     private final String INSERT_USER = "insertUser";
     private final String UPDATE_USER = "updateUser";
     private final String DELETE_USER = "deleteUser";
     private final String FIND_USER_BYID = "findUserById";
     private final String SELECT_ALL_USER = "selectAllUser";
     private final String USER_LOGIN = "userLogin";
-    @Autowired
-    private SqlSessionTemplate sqlSessionTemplate;
 
     public void insertUser(UserPo user) {
         sqlSessionTemplate.insert(INSERT_USER, user);
