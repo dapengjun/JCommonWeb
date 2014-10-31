@@ -20,7 +20,7 @@ public class UserServiceImpl extends BaseServiceImpl implements IUserService {
     @Autowired
     private IUserDao userDao;
 
-    public void test()
+    public void dbInit()
     {
     	try {
     		//    	userDao.execSql("create table test1(name varchar(20))");
