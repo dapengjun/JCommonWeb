@@ -38,6 +38,7 @@
         <!-- 最大活跃数 -->
         <property name="maxActive" value="${jdbc.maxActive}"></property>
         <!-- <property name="initialSize" value="${jdbc.initialSize}"></property> -->
+        <property name="defaultAutoCommit" value="true" />
     </bean>
     
     <!-- 配置mybitasSqlSessionFactoryBean -->
