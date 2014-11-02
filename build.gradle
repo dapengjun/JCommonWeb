@@ -10,7 +10,7 @@ sourceSets.main.java.srcDir 'src'
 
 eclipse {
     classpath {
-       defaultOutputDir = file('build')
+       defaultOutputDir = file('build/eclipse')
     }
 }
 
@@ -19,10 +19,10 @@ repositories {
 }
 
 dependencies {
-    providedRuntime (
+    providedCompile (
         "javax.servlet:javax.servlet-api:3.1.0"
     )
-	runtime (
+	compile (
 	    "mysql:mysql-connector-java:5.1.33",
 		"org.mybatis:mybatis:3.2.8",
 		"org.mybatis:mybatis-spring:1.2.2",
