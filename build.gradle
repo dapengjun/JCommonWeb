@@ -8,6 +8,12 @@ apply plugin: 'eclipse-wtp'
 webAppDirName = 'WebContent'
 sourceSets.main.java.srcDir 'src'
 
+eclipse {
+    classpath {
+       defaultOutputDir = file('build')
+    }
+}
+
 repositories {
 	mavenCentral()
 }
@@ -51,10 +57,4 @@ dependencies {
 		"com.jgeppert.struts2.jquery:struts2-jquery-chart-plugin:3.7.1",
 		"com.jgeppert.struts2.jquery:struts2-jquery-mobile-plugin:3.7.1"
 	)
-}
-
-task copyHbm(type: Copy){
-	from 'src/'
-	into 'WebContent/WEB-INF/classes/'
-	exclude '**/*.java'
 }
