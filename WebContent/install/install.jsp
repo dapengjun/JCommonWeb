@@ -5,10 +5,9 @@
     <title><s:text name="install.title"></s:text></title>
 </head>
 <body>
-<form action="intall.do" method="get">
-    <input type=text name="userPo.username"/><br/>
-    <input type=text name="userPo.password"/><br/>
-    <input type=submit />
+<form action="install.do" method="get">
+    安装数据库:
+    <input type=submit value="安装" />
 </form>
 </body>
 </html>

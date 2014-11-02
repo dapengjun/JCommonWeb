@@ -4,6 +4,6 @@ import cn.itear.common.service.IBaseService;
 
 public interface IInstallService extends IBaseService {
 
-    public void dbInit();
+    public void dbInit() throws Exception;
 
 }

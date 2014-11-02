@@ -21,13 +21,14 @@ public class InstallServiceImpl extends BaseServiceImpl implements IInstallServi
     @Autowired
     private IInstallDao installDao;
 
-    public void dbInit()
+    public void dbInit() throws Exception
     {
-    	try {
+//    	try {
     	    installDao.execSqlScript("database.sql");
-		} catch (IOException | SQLException e) {
-			e.printStackTrace();
-			TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
-		}
+//		} catch (IOException | SQLException e) {
+//			e.printStackTrace();
+//			TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
+//			throw e;
+//		}
     }
 }
