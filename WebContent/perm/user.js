@@ -8,8 +8,8 @@ $(document).ready(function() {
         }
     });
     $('#dg').datagrid({
-        title : '网络标签列表',
-        url : 'note!getAjaxList.action',
+        title : '用户列表',
+        url : 'user!getAjaxList.action',
         method : 'POST',
         nowrap : true,
         striped : true,
@@ -28,7 +28,7 @@ $(document).ready(function() {
             align : 'center',
             hidden : true
         }, {
-            field : 'content',
+            field : 'name',
             title : '内容',
             width : 150,
             align : 'left'

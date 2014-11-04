@@ -4,29 +4,29 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" type="text/css" href="themes/default/easyui.css">
-    <link rel="stylesheet" type="text/css" href="themes/icon.css">
-    <link rel="stylesheet" type="text/css" href="netnote.css">
-    <style>
-        .datagrid-row { cursor : pointer;}
-    </style>
-    <script type="text/javascript" language="javascript" src="js/jquery-2.0.0.js"></script>
-    <script type="text/javascript" language="javascript" src="js/jquery.easyui.min.js"></script>
-    <script type="text/javascript" language="javascript" src="netnote.js"></script>
+    <%@ include file="/common/header.jsp"%>
+    <link rel="stylesheet" type="text/css" href="user.css">
+    <script type="text/javascript" language="javascript" src="user.js"></script>
     <title><s:text name="user.title"></s:text></title>
 </head>
 <body>
     <div id="dg">
     </div>
-    <div id="dd" class="easyui-dialog" title="便签信息" style="width:550px;height:500px;"
+    <div id="dd" class="easyui-dialog" title="用户信息"
+        style="width:550px;height:500px;" 
         data-options="iconCls:'icon-save',resizable:true,modal:true, closed : true,
          buttons:[{ text:'保存', handler:save},
             {text:'取消', handler:cancel}]">
         <form id="ff" method="post">
-           <input type=hidden id="id" name="noteInfo.id"/>
+           <input type=hidden id="id" name="userInfo.id"/>
            <table>
             <tr>
-                <td><textarea class="easyui-validatebox" style="width:500px;height:400px;" id="content" name="noteInfo.content" data-options="required:true" /></td>
+                <td>
+                    <textarea class="easyui-validatebox"
+                     style="width:500px;height:400px;"
+                      id="content" name="userInfo.name"
+                       data-options="required:true" />
+               </td>
             </tr>
             </table>
         </form>
