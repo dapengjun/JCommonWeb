@@ -21,7 +21,7 @@ import com.opensymphony.xwork2.ActionContext;
 
 @Scope("prototype")
 @Controller("login")
-@Namespace("/")
+@Namespace("/perm")
 @ParentPackage("struts-shops")
 @Results({
     @Result(name = "success", type="redirect", location = "/index.jsp"),

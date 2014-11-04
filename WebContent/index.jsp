@@ -3,13 +3,11 @@
 <%@ taglib prefix="s" uri="/struts-tags"%>
 <html>
 <head>
-    <%@ include file="header.jsp"%>
+    <%@ include file="common/header.jsp"%>
     <link rel="stylesheet" type="text/css" href="index.css">
     <title><s:text name="index.title"></s:text></title>
 </head>
 <body>
-    <h2>Basic Tabs</h2>
-    <p>Click tab strip to swap tab panel content.</p>
     <div style="margin:20px 0 10px 0;"></div>
     <div class="easyui-tabs" style="width:700px;height:250px">
         <div title="About" style="padding:10px">

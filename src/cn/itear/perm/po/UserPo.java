@@ -3,9 +3,12 @@ package cn.itear.perm.po;
 import java.io.Serializable;
 
 public class UserPo implements Serializable {
-	private static final long serialVersionUID = -4415990281535582814L;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5094780227872215074L;
 	private Integer id;
-	private String username;
+	private String name;
 	private String password;
 
 	public Integer getId() {
@@ -16,12 +19,12 @@ public class UserPo implements Serializable {
 		this.id = id;
 	}
 
-	public String getUsername() {
-		return username;
+	public String getName() {
+		return name;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public String getPassword() {
@@ -30,11 +33,6 @@ public class UserPo implements Serializable {
 
 	public void setPassword(String password) {
 		this.password = password;
-	}
-
-	@Override
-	public String toString() {
-		return "User [id=" + id + ", password=" + password + ", username=" + username + "]";
 	}
 
 	@Override

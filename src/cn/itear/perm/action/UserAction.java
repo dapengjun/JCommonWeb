@@ -16,11 +16,11 @@ import cn.itear.perm.service.IUserService;
 
 @Scope("prototype")
 @Controller("userAction")
-@Namespace("/")
+@Namespace("/perm")
 @ParentPackage("struts-shops")
 @Results({
-	@Result(name = "success", location = "/user/success.jsp"),
-    @Result(name = "failure", location = "/user/success.jsp"),
+	@Result(name = "success", location = "/perm/success.jsp"),
+    @Result(name = "failure", location = "/perm/success.jsp"),
     @Result(name = "json", type = "json", params = {"root", "result"})
 })
 @Action(value = "user")
