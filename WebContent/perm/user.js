@@ -9,7 +9,7 @@ $(document).ready(function() {
     });
     $('#dg').datagrid({
         title : '用户列表',
-        url : 'user!getAjaxList.action',
+        url : 'user!selectAjaxList.do',
         method : 'POST',
         nowrap : true,
         striped : true,
@@ -29,7 +29,12 @@ $(document).ready(function() {
             hidden : true
         }, {
             field : 'name',
-            title : '内容',
+            title : '用户名',
+            width : 150,
+            align : 'left'
+        }, {
+            field : 'password',
+            title : '密码',
             width : 150,
             align : 'left'
         } ] ],

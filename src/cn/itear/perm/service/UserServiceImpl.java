@@ -1,13 +1,11 @@
 package cn.itear.perm.service;
 
-import java.io.IOException;
-import java.sql.SQLException;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.transaction.interceptor.TransactionAspectSupport;
 
 import cn.itear.common.service.BaseServiceImpl;
 import cn.itear.perm.dao.IUserDao;
@@ -20,19 +18,8 @@ public class UserServiceImpl extends BaseServiceImpl implements IUserService {
     @Autowired
     private IUserDao userDao;
 
-    public void dbInit()
-    {
-    	try {
-    		//    	userDao.execSql("create table test1(name varchar(20))");
-			userDao.execSqlScript("database.sql");
-		} catch (IOException | SQLException e) {
-			e.printStackTrace();
-			TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
-		}
-    }
-    
     // 添加用户
-    public void addUser(UserPo user) {
+    public void insertUser(UserPo user) {
         userDao.insertUser(user);
     }
 
@@ -45,15 +32,21 @@ public class UserServiceImpl extends BaseServiceImpl implements IUserService {
         userDao.deleteUser(userId);
     }
 
-    public UserPo findUserById(Integer userId) {
-        return userDao.findUserByid(userId);
+    public UserPo selectUser(Integer userId) {
+        return userDao.selectUser(userId);
     }
 
-    public List<UserPo> findAllUser() {
-        return userDao.findAll();
+    @SuppressWarnings("rawtypes")
+    public List<UserPo> selectUserList(Map map) {
+        return userDao.selectUserList(map);
     }
 
-    public UserPo login(UserPo user) {
+    @SuppressWarnings("rawtypes")
+    public int selectUserCnt(Map map) {
+        return userDao.selectUserCnt(map);
+    }
+
+    public UserPo userLogin(UserPo user) {
         return userDao.userLogin(user);
     }
 }

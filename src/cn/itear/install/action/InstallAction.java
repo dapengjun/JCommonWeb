@@ -35,7 +35,7 @@ public class InstallAction extends BaseAction {
     }
 
     @Autowired
-    protected IInstallService installService;
+    private IInstallService installService;
     
     public InstallAction() {
     }

@@ -5,6 +5,6 @@ import org.springframework.stereotype.Repository;
 import cn.itear.common.dao.BaseDaoImpl;
 
 @Repository("installDao")
-public class UserDaoImpl extends BaseDaoImpl implements IInstallDao {
+public class InstallDaoImpl extends BaseDaoImpl implements IInstallDao {
 
 }

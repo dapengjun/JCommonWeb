@@ -10,6 +10,7 @@
     <constant name="struts.i18n.encoding"  value="UTF-8"></constant>
     <constant name="struts.convention.package.locators" value="action" />
 	<constant name="struts.convention.classes.reload" value="true" />
+	<constant name="struts.enable.DynamicMethodInvocation" value="true"/> 
     <package name="struts-shops" extends="json-default,struts-default">
         <!-- 自定义返回类型 -->
         <!--<result-types> 

@@ -69,7 +69,7 @@ public class LoginAction extends BaseAction {
         return "success";
     }
     public String reg() {
-        userService.addUser(userPo);
+        userService.insertUser(userPo);
         return "success";
     }
 }

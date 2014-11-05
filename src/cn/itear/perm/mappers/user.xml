@@ -5,38 +5,74 @@
     
     <resultMap type="cn.itear.perm.po.UserPo" id="userResult">
         <result property="id" column="id" jdbcType="INTEGER" javaType="java.lang.Integer" />
-        <result property="username" column="username" />
+        <result property="name" column="name" />
         <result property="password" column="password" />
     </resultMap>
     <select id="userLogin"  parameterType="user" resultMap="userResult">
-        select * from user 
+        select * from p_user_t 
         where 
-            username=#{username} and password=#{password}
+            name=#{name} and password=#{password}
     </select>
 
-    <select id="selectAllUser" resultMap="userResult">
-        select * from user
+    <select id="selectUserList" parameterType="map" resultMap="userResult">
+        select * from p_user_t
+        <if test="_parameter != null" >
+	        <where>
+	            <if test="name != null">
+	                name like '%'||#{name}||'%'
+	            </if>
+	            <if test="password != null">
+	                and password = #{password}
+	            </if>
+	        </where>
+        </if>
+        order by name
+        <if test="_parameter != null" >
+            <if test="currRow != null and rowNum != null" >
+                limit #{currRow},#{rowNum}
+            </if>
+        </if>
+    </select>
+    
+    <select id="selectUserCnt" parameterType="map" resultType="int">
+        select count(1) from p_user_t
+        <if test="_parameter != null" >
+	        <where>
+	            <if test="name != null">
+	                name = #{name}
+	            </if>
+	            <if test="password != null">
+	                and password = #{password}
+	            </if>
+	        </where>
+        </if>
     </select>
 
-    <select id="findUserById" parameterType="int" resultMap="userResult">
+    <select id="selectUser" parameterType="int" resultMap="userResult">
         select *
-        from user where id=#{id}
+        from p_user_t where id=#{id}
     </select>
 
     <insert id="insertUser" parameterType="user">
-     <![CDATA[
         insert into
-        user(username,password) values(#{username},#{password})
-        ]]>
+        p_user_t(name,password) values(#{name},#{password})
     </insert>
 
     <update id="updateUser" parameterType="user">
-        update user set
-        username=#{username},password=#{password} where id=#{id}
+		update p_user_t
+		<set>
+			<if test="name != null">
+				name=#{name},
+			</if>
+			<if test="password != null">
+				password=#{password}
+			</if>
+		</set>
+		where id = #{id}
     </update>
     
     <delete id="deleteUser" parameterType="int">
-        delete from user where
+        delete from p_user_t where
         id=#{id}
     </delete>
 

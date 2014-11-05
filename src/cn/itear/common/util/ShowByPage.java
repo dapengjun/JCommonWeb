@@ -4,7 +4,7 @@ public class ShowByPage {
 
     private String param = null;
     private int page = 0;// 第几页
-    private int rows = 0;// 一夜有多少行
+    private int rows = 0;// 一页有多少行
     public String getParam() {
         return param;
     }

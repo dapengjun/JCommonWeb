@@ -3,7 +3,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <%@ include file="/common/header.jsp"%>
     <link rel="stylesheet" type="text/css" href="user.css">
     <script type="text/javascript" language="javascript" src="user.js"></script>
@@ -24,7 +23,7 @@
                 <td>
                     <textarea class="easyui-validatebox"
                      style="width:500px;height:400px;"
-                      id="content" name="userInfo.name"
+                      id="name" name="userInfo.name"
                        data-options="required:true" />
                </td>
             </tr>

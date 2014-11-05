@@ -1,5 +1,9 @@
 package cn.itear.perm.action;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Namespace;
 import org.apache.struts2.convention.annotation.ParentPackage;
@@ -27,19 +31,11 @@ import cn.itear.perm.service.IUserService;
 public class UserAction extends BaseAction {
     private static final long serialVersionUID = 1L;
 
-    protected IUserService userService;
+    @Autowired
+    private IUserService userService;
     
     public UserAction() {
         page = new ShowByPage();
-    }
-
-    public IUserService getUserService() {
-        return userService;
-    }
-
-    @Autowired
-    public void setUserService(IUserService userService) {
-        this.userService = userService;
     }
 
     private UserPo userInfo;
@@ -53,13 +49,13 @@ public class UserAction extends BaseAction {
     }
 
     public String execute() {
-        userService.addUser(userInfo);
+        userService.insertUser(userInfo);
         return "success";
     }
 
-    public String getUser() {
+    public String selectUser() {
         try{
-            userInfo = userService.findUserById(userInfo.getId());
+            userInfo = userService.selectUser(userInfo.getId());
             result = userInfo.toString();
         }catch(Exception e) {
             e.printStackTrace();
@@ -69,7 +65,7 @@ public class UserAction extends BaseAction {
 
     public String save() {
         try{
-            userService.addUser(userInfo);
+            userService.insertUser(userInfo);
         }catch(Exception e) {
             e.printStackTrace();
         }
@@ -117,31 +113,30 @@ public class UserAction extends BaseAction {
         page.setParam(param);
     }
 
-    public String getAjaxList() {
-//        JSONArray arr = null;
-//        JSONObject obj = null;
-//        List<UserPo> list = null;
-//        int total;
-//        String condition = null;
-//        List<Object> param = null;
-//        String userName = null;
-//        try {
-//            userName = page.getParam();
-//            if (userName != null && userName.length() > 0) {
-//                param = new ArrayList<Object>();
-//                condition = "where t.userName like ?";
-//                param.add("%"+userName+"%");
-//            }
-//            list = userService.getUserList(condition, param, (page.getPage() - 1) * page.getRows(), page.getRows());
-//            total = userService.getUserCount(condition, param);
-//            arr = JSONArray.fromObject(list);
-//            obj = new JSONObject();
-//            obj.put("total", total);
-//            obj.put("rows", arr);
-//            result = obj.toString();
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
+    @SuppressWarnings({ "unchecked", "rawtypes" })
+    public String selectAjaxList() {
+        Map map = null;
+        List<UserPo> list = null;
+        int total;
+        Map param = null;
+        String userName = null;
+        try {
+            param = new HashMap();
+            userName = page.getParam();
+            if (userName != null && userName.length() > 0) {
+                param.put("name", userName);
+            }
+            param.put("currRow", (page.getPage() - 1) * page.getRows());
+            param.put("rowNum", page.getRows());
+            list = userService.selectUserList(param);
+            total = userService.selectUserCnt(null);
+            map = new HashMap();
+            map.put("rows", list);
+            map.put("total", total);
+            result = gson.toJson(map);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return "json";
     }
 }
