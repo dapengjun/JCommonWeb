@@ -19,7 +19,7 @@
         <if test="_parameter != null" >
 	        <where>
 	            <if test="name != null">
-	                name like '%'||#{name}||'%'
+	                name like #{name}
 	            </if>
 	            <if test="password != null">
 	                and password = #{password}
@@ -39,7 +39,7 @@
         <if test="_parameter != null" >
 	        <where>
 	            <if test="name != null">
-	                name like '%'||#{name}||'%'
+	                name like #{name}
 	            </if>
 	            <if test="password != null">
 	                and password = #{password}

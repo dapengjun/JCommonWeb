@@ -78,16 +78,16 @@ $(document).ready(function() {
             },
             '-',
             {
+                text: "名称:<input type='text' id='keyword' />"
+            },
+            '-',
+            {
                 text : "搜索",
                 iconCls : 'icon-search',
                 handler : function() {
                     var keyword = $("#keyword").val();
                     reloadgrid(keyword);
                 }
-            },
-            '-',
-            {
-                text: "名称:<input type='text' id='keyword' style='position:absolute;top:0px;' />"
             }
         ],
         AllowPaging : true
@@ -105,23 +105,6 @@ function searchData() {
     var keyword = $("#keyword").val();
     reloadgrid(keyword);
 }
-function resize() {
-    $('#dg').datagrid('resize', {
-        width : 700,
-        height : 400
-    });
-}
-function getSelections() {
-    var ids = [];
-    var rows = $('#dg').datagrid('getSelections');
-    for (var i = 0; i < rows.length; i++) {
-        ids.push(rows[i].code);
-    }
-    alert(ids.join(':'));
-}
-function clearSelections() {
-    $('#dg').datagrid('clearSelections');
-}
 
 function cancel(){
     $('#dd').panel('close');
@@ -129,7 +112,7 @@ function cancel(){
 
 function save(){
     $('#ff').form('submit', {
-        url:"note!save.action",
+        url:"user!save.action",
         success: function(data){
             data = JSON.parse(data);
             data = JSON.parse(data);
@@ -144,11 +127,11 @@ function save(){
 function del(){
     var selected = $('#dg').datagrid('getSelected');
     if (selected) {
-        var data = "{\"noteInfo.id\":\""+selected.id+"\"}";
+        var data = "{\"userInfo.id\":\""+selected.id+"\"}";
         data = JSON.parse(data);
         $.ajax({ 
             type: "post",
-            url: "note!remove.action",
+            url: "user!remove.do",
             dataType: "json",
             data : data,
             success: function (data) {
@@ -169,7 +152,7 @@ function getUser(){
     if (selected) {
         var data = "{\"userInfo.id\":\""+selected.id+"\"}";
         data = JSON.parse(data);
-        $.ajax({ 
+        $.ajax({
             type: "post",
             url: "user!selectUser.do",
             dataType: "json",
@@ -188,4 +171,15 @@ function getUser(){
             }
         });
     }
+}
+
+function resize() {
+    $('#dg').datagrid('resize', {
+        width : 700,
+        height : 400
+    });
+}
+
+function clearSelections() {
+    $('#dg').datagrid('clearSelections');
 }

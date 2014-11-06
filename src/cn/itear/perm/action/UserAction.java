@@ -66,30 +66,36 @@ public class UserAction extends BaseAction {
     public String save() {
         try{
             userService.insertUser(userInfo);
+            result = "1";
         }catch(Exception e) {
             e.printStackTrace();
+            result = "0";
         }
-        result = "";
+        result = "{\"result\":\""+result+"\"}";
         return "json";
     }
 
     public String update() {
         try{
             userService.updateUser(userInfo);
+            result = "1";
         }catch(Exception e) {
             e.printStackTrace();
+            result = "0";
         }
-        result = "";
+        result = "{\"result\":\""+result+"\"}";
         return "json";
     }
 
     public String remove() {
         try{
             userService.deleteUser(userInfo.getId());
+            result = "1";
         }catch(Exception e) {
             e.printStackTrace();
+            result = "0";
         }
-        result = "";
+        result = "{\"result\":\""+result+"\"}";
         return "json";
     }
 
@@ -124,7 +130,7 @@ public class UserAction extends BaseAction {
             param = new HashMap();
             userName = page.getParam();
             if (userName != null && userName.length() > 0) {
-                param.put("name", userName);
+                param.put("name", "%"+userName+"%");
             }
             param.put("currRow", (page.getPage() - 1) * page.getRows());
             param.put("rowNum", page.getRows());
