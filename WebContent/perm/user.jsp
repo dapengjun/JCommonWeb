@@ -20,10 +20,18 @@
            <input type=hidden id="id" name="userInfo.id"/>
            <table>
             <tr>
+                <td>名称</td>
                 <td>
-                    <textarea class="easyui-validatebox"
-                     style="width:500px;height:400px;"
+                    <input class="easyui-validatebox"
                       id="name" name="userInfo.name"
+                       data-options="required:true" />
+               </td>
+            </tr>
+            <tr>
+                <td>密码</td>
+                <td>
+                    <input class="easyui-validatebox"
+                      id="password" name="userInfo.password"
                        data-options="required:true" />
                </td>
             </tr>

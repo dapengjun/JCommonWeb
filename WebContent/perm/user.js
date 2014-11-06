@@ -87,7 +87,7 @@ $(document).ready(function() {
             },
             '-',
             {
-                text: "内容:<input type='text' id='keyword' style='position:absolute;top:0px;' />"
+                text: "名称:<input type='text' id='keyword' style='position:absolute;top:0px;' />"
             }
         ],
         AllowPaging : true
@@ -167,18 +167,19 @@ function del(){
 function getUser(){
     var selected = $('#dg').datagrid('getSelected');
     if (selected) {
-        var data = "{\"noteInfo.id\":\""+selected.id+"\"}";
+        var data = "{\"userInfo.id\":\""+selected.id+"\"}";
         data = JSON.parse(data);
         $.ajax({ 
             type: "post",
-            url: "note!getNote.action",
+            url: "user!selectUser.do",
             dataType: "json",
             data : data,
             success: function (data) {
                 $('#ff').form('clear');
                 data = JSON.parse(data);
                 $('#id').val(data.id);
-                $('#content').val(data.content);
+                $('#name').val(data.name);
+                $('#password').val(data.password);
                 $('#ff').form('validate');
                 $('#dd').panel('open');
             },

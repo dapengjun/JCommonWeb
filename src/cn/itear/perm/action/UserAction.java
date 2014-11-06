@@ -49,14 +49,14 @@ public class UserAction extends BaseAction {
     }
 
     public String execute() {
-        userService.insertUser(userInfo);
+//        userService.insertUser(userInfo);
         return "success";
     }
 
     public String selectUser() {
         try{
             userInfo = userService.selectUser(userInfo.getId());
-            result = userInfo.toString();
+            result = gson.toJson(userInfo);
         }catch(Exception e) {
             e.printStackTrace();
         }
