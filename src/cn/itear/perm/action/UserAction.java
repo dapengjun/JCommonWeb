@@ -129,7 +129,7 @@ public class UserAction extends BaseAction {
             param.put("currRow", (page.getPage() - 1) * page.getRows());
             param.put("rowNum", page.getRows());
             list = userService.selectUserList(param);
-            total = userService.selectUserCnt(null);
+            total = userService.selectUserCnt(param);
             map = new HashMap();
             map.put("rows", list);
             map.put("total", total);
