@@ -63,7 +63,7 @@ public class UserAction extends BaseAction {
         return "json";
     }
 
-    public String save() {
+    public String insert() {
         try{
             userService.insertUser(userInfo);
             result = "1";
@@ -87,7 +87,7 @@ public class UserAction extends BaseAction {
         return "json";
     }
 
-    public String remove() {
+    public String delete() {
         try{
             userService.deleteUser(userInfo.getId());
             result = "1";

@@ -111,17 +111,31 @@ function cancel(){
 }
 
 function save(){
-    $('#ff').form('submit', {
-        url:"user!save.action",
-        success: function(data){
-            data = JSON.parse(data);
-            data = JSON.parse(data);
-            if (data.result=="1"){
-                $("#dg").datagrid('reload');
-                $('#dd').panel('close');
-            }
-        }
-    });
+	if ($('#id').val() == '') {
+	    $('#ff').form('submit', {
+	        url:"user!insert.action",
+	        success: function(data){
+	            data = JSON.parse(data);
+	            data = JSON.parse(data);
+	            if (data.result=="1"){
+	                $("#dg").datagrid('reload');
+	                $('#dd').panel('close');
+	            }
+	        }
+	    });
+	} else {
+	    $('#ff').form('submit', {
+	        url:"user!update.action",
+	        success: function(data){
+	            data = JSON.parse(data);
+	            data = JSON.parse(data);
+	            if (data.result=="1"){
+	                $("#dg").datagrid('reload');
+	                $('#dd').panel('close');
+	            }
+	        }
+	    });
+	}
 }
 
 function del(){
@@ -131,7 +145,7 @@ function del(){
         data = JSON.parse(data);
         $.ajax({ 
             type: "post",
-            url: "user!remove.do",
+            url: "user!delete.do",
             dataType: "json",
             data : data,
             success: function (data) {
