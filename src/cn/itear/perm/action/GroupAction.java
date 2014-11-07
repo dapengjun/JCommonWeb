@@ -15,11 +15,11 @@ import org.springframework.stereotype.Controller;
 
 import cn.itear.common.action.BaseAction;
 import cn.itear.common.util.ShowByPage;
-import cn.itear.perm.po.UserPo;
-import cn.itear.perm.service.IUserService;
+import cn.itear.perm.po.GroupPo;
+import cn.itear.perm.service.IGroupService;
 
 @Scope("prototype")
-@Controller("userAction")
+@Controller("groupAction")
 @Namespace("/perm")
 @ParentPackage("struts-shops")
 @Results({
@@ -27,36 +27,35 @@ import cn.itear.perm.service.IUserService;
     @Result(name = "failure", location = "/perm/success.jsp"),
     @Result(name = "json", type = "json", params = {"root", "result"})
 })
-@Action(value = "user")
-public class UserAction extends BaseAction {
+@Action(value = "group")
+public class GroupAction extends BaseAction {
     private static final long serialVersionUID = 1L;
 
     @Autowired
-    private IUserService userService;
+    private IGroupService groupService;
     
-    public UserAction() {
+    public GroupAction() {
         page = new ShowByPage();
     }
 
-    private UserPo userInfo;
+    private GroupPo groupInfo;
 
-    public UserPo getUserInfo() {
-        return userInfo;
+    public GroupPo getGroupInfo() {
+        return groupInfo;
     }
 
-    public void setUserInfo(UserPo userInfo) {
-        this.userInfo = userInfo;
+    public void setGroupInfo(GroupPo groupInfo) {
+        this.groupInfo = groupInfo;
     }
 
     public String execute() {
-//        userService.insertUser(userInfo);
         return "success";
     }
 
     public String selectUser() {
         try{
-            userInfo = userService.selectOne(userInfo.getId());
-            result = gson.toJson(userInfo);
+            groupInfo = groupService.selectOne(groupInfo.getId());
+            result = gson.toJson(groupInfo);
         }catch(Exception e) {
             e.printStackTrace();
         }
@@ -65,7 +64,7 @@ public class UserAction extends BaseAction {
 
     public String insert() {
         try{
-            userService.insert(userInfo);
+            groupService.insert(groupInfo);
             result = "1";
         }catch(Exception e) {
             e.printStackTrace();
@@ -77,7 +76,7 @@ public class UserAction extends BaseAction {
 
     public String update() {
         try{
-            userService.update(userInfo);
+            groupService.update(groupInfo);
             result = "1";
         }catch(Exception e) {
             e.printStackTrace();
@@ -89,7 +88,7 @@ public class UserAction extends BaseAction {
 
     public String delete() {
         try{
-            userService.delete(userInfo.getId());
+            groupService.delete(groupInfo.getId());
             result = "1";
         }catch(Exception e) {
             e.printStackTrace();
@@ -122,23 +121,23 @@ public class UserAction extends BaseAction {
     @SuppressWarnings({ "unchecked", "rawtypes" })
     public String selectAjaxList() {
         Map map = null;
-        List<UserPo> list = null;
+        List<GroupPo> list = null;
         int total;
         int currPage;
         Map param = null;
-        String userName = null;
+        String name = null;
         try {
             param = new HashMap();
-            userName = page.getParam();
-            if (userName != null && userName.length() > 0) {
-                param.put("name", "%"+userName+"%");
+            name = page.getParam();
+            if (name != null && name.length() > 0) {
+                param.put("name", "%"+name+"%");
             }
             currPage = (page.getPage() - 1) * page.getRows();
             currPage = currPage < 0 ? 0 : currPage;
             param.put("currRow", currPage);
             param.put("rowNum", page.getRows());
-            list = userService.selectList(param);
-            total = userService.selectCnt(param);
+            list = groupService.selectList(param);
+            total = groupService.selectCnt(param);
             map = new HashMap();
             map.put("rows", list);
             map.put("total", total);

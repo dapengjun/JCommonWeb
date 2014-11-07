@@ -8,8 +8,8 @@ $(document).ready(function() {
         }
     });
     $('#dg').datagrid({
-        title : '用户列表',
-        url : 'user!selectAjaxList.do',
+        title : '组列表',
+        url : 'group!selectAjaxList.do',
         method : 'POST',
         nowrap : true,
         striped : true,
@@ -29,12 +29,12 @@ $(document).ready(function() {
             hidden : true
         }, {
             field : 'name',
-            title : '用户名',
+            title : '组名',
             width : 150,
             align : 'left'
         }, {
-            field : 'password',
-            title : '密码',
+            field : 'desc',
+            title : '组描述',
             width : 150,
             align : 'left'
         } ] ],
@@ -113,7 +113,7 @@ function cancel(){
 function save(){
 	if ($('#id').val() == '') {
 	    $('#ff').form('submit', {
-	        url:"user!insert.action",
+	        url:"group!insert.action",
 	        success: function(data){
 	            data = JSON.parse(data);
 	            data = JSON.parse(data);
@@ -125,7 +125,7 @@ function save(){
 	    });
 	} else {
 	    $('#ff').form('submit', {
-	        url:"user!update.action",
+	        url:"group!update.action",
 	        success: function(data){
 	            data = JSON.parse(data);
 	            data = JSON.parse(data);
@@ -141,11 +141,11 @@ function save(){
 function del(){
     var selected = $('#dg').datagrid('getSelected');
     if (selected) {
-        var data = "{\"userInfo.id\":\""+selected.id+"\"}";
+        var data = "{\"groupInfo.id\":\""+selected.id+"\"}";
         data = JSON.parse(data);
         $.ajax({ 
             type: "post",
-            url: "user!delete.do",
+            url: "group!delete.do",
             dataType: "json",
             data : data,
             success: function (data) {
@@ -164,11 +164,11 @@ function del(){
 function getInfo(){
     var selected = $('#dg').datagrid('getSelected');
     if (selected) {
-        var data = "{\"userInfo.id\":\""+selected.id+"\"}";
+        var data = "{\"groupInfo.id\":\""+selected.id+"\"}";
         data = JSON.parse(data);
         $.ajax({
             type: "post",
-            url: "user!selectUser.do",
+            url: "group!selectUser.do",
             dataType: "json",
             data : data,
             success: function (data) {
@@ -176,7 +176,7 @@ function getInfo(){
                 data = JSON.parse(data);
                 $('#id').val(data.id);
                 $('#name').val(data.name);
-                $('#password').val(data.password);
+                $('#desc').val(data.desc);
                 $('#ff').form('validate');
                 $('#dd').panel('open');
             },

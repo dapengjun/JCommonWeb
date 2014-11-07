@@ -35,16 +35,8 @@ import com.opensymphony.xwork2.ActionContext;
 public class LoginAction extends BaseAction {
 
     private static final long serialVersionUID = 1L;
-    protected IUserService userService;
-    
-    public IUserService getUserService() {
-        return userService;
-    }
-
     @Autowired
-    public void setUserService(IUserService userService) {
-        this.userService = userService;
-    }
+    protected IUserService userService;
     
     private UserPo userPo;
     public UserPo getUserPo() {
@@ -69,7 +61,7 @@ public class LoginAction extends BaseAction {
         return "success";
     }
     public String reg() {
-        userService.insertUser(userPo);
+        userService.insert(userPo);
         return "success";
     }
 }

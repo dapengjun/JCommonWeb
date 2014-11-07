@@ -19,31 +19,31 @@ public class UserServiceImpl extends BaseServiceImpl implements IUserService {
     private IUserDao userDao;
 
     // 添加用户
-    public void insertUser(UserPo user) {
-        userDao.insertUser(user);
+    public void insert(UserPo user) {
+        userDao.insert(user);
     }
 
     // 更新用户
-    public void updateUser(UserPo user) {
-        userDao.updateUser(user);
+    public void update(UserPo user) {
+        userDao.update(user);
     }
 
-    public void deleteUser(Integer userId) {
-        userDao.deleteUser(userId);
+    public void delete(Integer userId) {
+        userDao.delete(userId);
     }
 
-    public UserPo selectUser(Integer userId) {
-        return userDao.selectUser(userId);
-    }
-
-    @SuppressWarnings("rawtypes")
-    public List<UserPo> selectUserList(Map map) {
-        return userDao.selectUserList(map);
+    public UserPo selectOne(Integer userId) {
+        return userDao.selectOne(userId);
     }
 
     @SuppressWarnings("rawtypes")
-    public int selectUserCnt(Map map) {
-        return userDao.selectUserCnt(map);
+    public List<UserPo> selectList(Map map) {
+        return userDao.selectList(map);
+    }
+
+    @SuppressWarnings("rawtypes")
+    public int selectCnt(Map map) {
+        return userDao.selectCnt(map);
     }
 
     public UserPo userLogin(UserPo user) {

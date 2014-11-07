@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.itear.perm.dao.IGroupDao">
+    
+    <resultMap type="cn.itear.perm.po.GroupPo" id="groupResult">
+        <result property="id" column="id" jdbcType="INTEGER" javaType="java.lang.Integer" />
+        <result property="name" column="name" />
+        <result property="desc" column="group_desc" />
+    </resultMap>
+
+    <select id="selectGroupList" parameterType="map" resultMap="groupResult">
+        select * from p_group_t
+        <if test="_parameter != null" >
+	        <where>
+	            <if test="name != null">
+	                name like #{name}
+	            </if>
+	            <if test="desc != null">
+	                and group_desc = #{desc}
+	            </if>
+	        </where>
+        </if>
+        order by name
+        <if test="_parameter != null" >
+            <if test="currRow != null and rowNum != null" >
+                limit #{currRow},#{rowNum}
+            </if>
+        </if>
+    </select>
+    
+    <select id="selectGroupCnt" parameterType="map" resultType="int">
+        select count(1) from p_group_t
+        <if test="_parameter != null" >
+	        <where>
+	            <if test="name != null">
+	                name like #{name}
+	            </if>
+	            <if test="desc != null">
+	                and group_desc = #{desc}
+	            </if>
+	        </where>
+        </if>
+    </select>
+
+    <select id="selectGroup" parameterType="int" resultMap="groupResult">
+        select *
+        from p_group_t where id=#{id}
+    </select>
+
+    <insert id="insertGroup" parameterType="group">
+        insert into
+        p_group_t(name,group_desc) values(#{name},#{desc})
+    </insert>
+
+    <update id="updateGroup" parameterType="group">
+		update p_group_t
+		<set>
+			<if test="name != null">
+				name=#{name},
+			</if>
+			<if test="desc != null">
+				group_desc=#{desc}
+			</if>
+		</set>
+		where id = #{id}
+    </update>
+    
+    <delete id="deleteGroup" parameterType="int">
+        delete from p_group_t where
+        id=#{id}
+    </delete>
+
+</mapper>

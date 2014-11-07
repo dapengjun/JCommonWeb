@@ -3,9 +3,11 @@
 <configuration>
     <typeAliases>
         <typeAlias alias="user" type="cn.itear.perm.po.UserPo"/>
+        <typeAlias alias="group" type="cn.itear.perm.po.GroupPo"/>
     </typeAliases>
     <mappers>
-        <mapper resource="cn/itear/perm/mappers/user.xml" />
         <mapper resource="cn/itear/common/mappers/common.xml" />
+        <mapper resource="cn/itear/perm/mappers/user.xml" />
+        <mapper resource="cn/itear/perm/mappers/group.xml" />
     </mappers>
 </configuration>
